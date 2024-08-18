@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # 进入用户目录
-cd ~/domains/nezha001.rr.nu/public_html
+cd ~/domains/nezha001.myfw.us/public_html
 
 # 克隆 nezha 代码库
 echo "Cloning nezha repository..."
@@ -9,7 +9,7 @@ git clone https://github.com/naiba/nezha.git
 
 # 进入到构建目录
 echo "Entering dashboard directory..."
-cd ~/domains/nezha001.rr.nu/public_html/nezha/cmd/dashboard
+cd ~/domains/nezha001.myfw.us/public_html/nezha/cmd/dashboard
 
 # 构建项目
 echo "Building the project..."
@@ -17,38 +17,38 @@ go build -ldflags="-s -w --extldflags '-static -fpic' -X github.com/naiba/nezha/
 
 # 创建 nezhapanel 目录并进入
 echo "Creating and entering nezhapanel directory..."
-mkdir ~/domains/nezha001.rr.nu/public_html/nezhapanel
-cd ~/domains/nezha001.rr.nu/public_html/nezhapanel
+mkdir ~/domains/nezha001.myfw.us/public_html/nezhapanel
+cd ~/domains/nezha001.myfw.us/public_html/nezhapanel
 
 # 复制构建后的 dashboard 文件
 echo "Copying dashboard binary..."
-cp ~/domains/nezha001.rr.nu/public_html/nezha/cmd/dashboard/dashboard ~/domains/nezha001.rr.nu/public_html/nezhapanel/dashboard
+cp ~/domains/nezha001.myfw.us/public_html/nezha/cmd/dashboard/dashboard ~/domains/nezha001.myfw.us/public_html/nezhapanel/dashboard
 
 # 复制资源文件
 echo "Copying resource directory..."
-cp -r ~/domains/nezha001.rr.nu/public_html/nezha/resource ~/domains/nezha001.rr.nu/public_html/nezhapanel/resource
+cp -r ~/domains/nezha001.myfw.us/public_html/nezha/resource ~/domains/nezha001.myfw.us/public_html/nezhapanel/resource
 
 # 删除 resource.go 文件
 echo "Removing resource.go..."
-rm ~/domains/nezha001.rr.nu/public_html/nezhapanel/resource/resource.go
+rm ~/domains/nezha001.myfw.us/public_html/nezhapanel/resource/resource.go
 
 # 创建数据目录
 echo "Creating data directory..."
-mkdir ~/domains/nezha001.rr.nu/public_html/nezhapanel/data
+mkdir ~/domains/nezha001.myfw.us/public_html/nezhapanel/data
 
 # 复制配置文件
 echo "Copying config.yaml..."
-cp ~/domains/nezha001.rr.nu/public_html/nezha/script/config.yaml ~/domains/nezha001.rr.nu/public_html/nezhapanel/data/config.yaml
+cp ~/domains/nezha001.myfw.us/public_html/nezha/script/config.yaml ~/domains/nezha001.myfw.us/public_html/nezhapanel/data/config.yaml
 
 # 修改配置文件
 echo "Modifying config.yaml..."
-sed -i '' 's/language: .*/language: zh-CN/' ~/domains/nezha001.rr.nu/public_html/nezhapanel/data/config.yaml
-sed -i '' 's/httpport: .*/httpport: 7397/' ~/domains/nezha001.rr.nu/public_html/nezhapanel/data/config.yaml
-sed -i '' 's/grpcport: .*/grpcport: 18333/' ~/domains/nezha001.rr.nu/public_html/nezhapanel/data/config.yaml
+sed -i '' 's/language: .*/language: zh-CN/' ~/domains/nezha001.myfw.us/public_html/nezhapanel/data/config.yaml
+sed -i '' 's/httpport: .*/httpport: 7397/' ~/domains/nezha001.myfw.us/public_html/nezhapanel/data/config.yaml
+sed -i '' 's/grpcport: .*/grpcport: 18333/' ~/domains/nezha001.myfw.us/public_html/nezhapanel/data/config.yaml
 
 # 进入 nezhapanel 目录并设置权限
 echo "Entering nezhapanel directory and setting permissions..."
-cd ~/domains/nezha001.rr.nu/public_html/nezhapanel
+cd ~/domains/nezha001.myfw.us/public_html/nezhapanel
 chmod +x ./dashboard
 
 # 后台运行 dashboard
