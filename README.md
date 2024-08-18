@@ -12,7 +12,7 @@ bash <(curl -s https://raw.githubusercontent.com/asd5772525/serv00-sh/main/insta
 | 脚本内                 | 替换成                          |
 |:-------------------:|:----------------------------:|
 | USERNAME.serv00.com |  替换成`Add a New Website`定义的域名 |
-| 端口13140、13141       | 替换成自己开放的端口                   |
+| 端口7397、18333       | 替换成自己开放的端口                   |
 ## 哪吒面板agent一键安装
 ```
 bash <(curl -s https://raw.githubusercontent.com/asd5772525/serv00-sh/main/install_agent.sh)
