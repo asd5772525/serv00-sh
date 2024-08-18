@@ -2,13 +2,13 @@
 
 # 下载并解压 Nezha agent
 wget -O ~/nezha-agent_freebsd_amd64.zip https://github.com/nezhahq/agent/releases/download/v0.16.7/nezha-agent_freebsd_amd64.zip
-unzip ~/nezha-agent_freebsd_amd64.zip -d ~/domains/musaka.serv00.net/public_html/nezhapanel
+unzip ~/nezha-agent_freebsd_amd64.zip -d ~/domains/nezha001.rr.nu/public_html/nezhapanel
 
 # 创建 tmp 目录
 mkdir -p ~/tmp
 
 # 切换到 nezhapanel 目录
-cd ~/domains/musaka.serv00.net/public_html/nezhapanel
+cd ~/domains/nezha001.rr.nu/public_html/nezhapanel
 
 # 赋予 nezha-agent 可执行权限
 chmod +x nezha-agent
@@ -19,7 +19,7 @@ cat > agent.sh << EOF
 
 export TMPDIR=/home/musaka/tmp
 
-/home/USERNAME/domains/musaka.serv00.net/public_html/nezhapanel/nezha-agent -s musaka.serv00.net:18333 -p password -d
+/home/USERNAME/domains/nezha001.rr.nu/public_html/nezhapanel/nezha-agent -s nezha001.rr.nu:18333 -p password -d
 EOF
 
 # 赋予 agent.sh 可执行权限
