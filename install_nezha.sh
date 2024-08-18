@@ -26,7 +26,7 @@ cp ~/domains/musaka.serv00.net/public_html/nezha/cmd/dashboard/dashboard ~/domai
 
 # 复制资源文件
 echo "Copying resource directory..."
-cp -r ~/domains/musaka.serv00.net/public_html/nezha/resource ~/domains/USERNAME.serv00.com/public_html/nezhapanel/resource
+cp -r ~/domains/musaka.serv00.net/public_html/nezha/resource ~/domains/musaka.serv00.net/public_html/nezhapanel/resource
 
 # 删除 resource.go 文件
 echo "Removing resource.go..."
@@ -38,7 +38,7 @@ mkdir ~/domains/musaka.serv00.net/public_html/nezhapanel/data
 
 # 复制配置文件
 echo "Copying config.yaml..."
-cp ~/domains/USERNAME.serv00.com/public_html/nezha/script/config.yaml ~/domains/musaka.serv00.net/public_html/nezhapanel/data/config.yaml
+cp ~/domains/musaka.serv00.net/public_html/nezha/script/config.yaml ~/domains/musaka.serv00.net/public_html/nezhapanel/data/config.yaml
 
 # 修改配置文件
 echo "Modifying config.yaml..."
